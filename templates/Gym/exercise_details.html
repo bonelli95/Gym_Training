@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ exercise_info.title }}</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>{{ exercise_info.title }}</h1>
+    </header>
+    {% for exercise in exercise_info %}
+    <section id="main-content">
+        <div class='exercise_info'>
+            <img src="{% static '/back_training/'%}{{exercise.image}}" alt="{{ exercise.title2 }}">
+            <h2>{{ exercise.title2 }}</h2>
+            <p><i>{{ exercise.description }}</i></p>
+        </div>
+    </section>
+    {% endfor %}
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Gym.</p>
+        </div>
+    </footer>
+</body>
+</html>

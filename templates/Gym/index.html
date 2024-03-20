@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -23,28 +22,41 @@
 
     <section id="main-content">
         <div class="profile">
-            <a href="#"><img src="{% static 'assets/costas.png' %}" alt="Back Training"></a>
+            <a href="{% url 'exercise_details' %}">
+                <img src="{% static 'assets/costas.png' %}" alt="Back Training">
+            </a>
         </div>
         <div class="profile">
-            <a href="#"><img src="{% static 'assets/chest.png' %}" alt="Chest Training"></a>
+            <a href="{% url 'exercise_details'%}">
+                <img src="{% static 'assets/chest.png' %}" alt="Chest Training">
+            </a>
         </div>
         <div class="profile">
-            <a href="#"><img src="{% static 'assets/biceps.png' %}" alt="Biceps Training"></a>
+            <a href="{% url 'exercise_details'%}">
+                <img src="{% static 'assets/biceps.png' %}" alt="Biceps Training">
+            </a>
         </div>
         <div class="profile">
-            <a href="#"><img src="{% static 'assets/triceps.png' %}" alt="Triceps Training"></a>
+            <a href="{% url 'exercise_details'%}">
+                <img src="{% static 'assets/triceps.png' %}" alt="Triceps Training">
+            </a>
         </div>
         <div class="profile">
-            <a href="#"><img src="{% static 'assets/agachamento.png' %}" alt="Leg Training"></a>
+            <a href="{% url 'exercise_details'%}">
+                <img src="{% static 'assets/agachamento.png' %}" alt="Leg Training">
+            </a>
         </div>
         <div class="profile">
-            <a href="#"><img src="{% static 'assets/glute.png' %}" alt="Glute Training"></a>
+            <a href="{% url 'exercise_details'%}">
+                <img src="{% static 'assets/glute.png' %}" alt="Glute Training">
+            </a>
         </div>
         <div class="profile">
-            <a href="#"><img src="{% static 'assets/ombros.png' %}" alt="Shoulder Training"></a>
+            <a href="{% url 'exercise_details'%}">
+                <img src="{% static 'assets/ombros.png' %}" alt="Shoulder Training">
+            </a>
         </div>
     </section>
-
     <footer>
         <div class="container">
             <p>&copy; 2024 GYM.</p>

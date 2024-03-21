@@ -10,11 +10,16 @@
 <body>
     <header>
         <h1>{{ exercise_info.title }}</h1>
+        <nav>
+            <ul>
+                <h3><li><a href="{% url 'index' %}">Home</a></li></h3>
+            </ul>
+        </nav>
     </header>
     {% for exercise in exercise_info %}
     <section id="main-content">
         <div class='exercise_info'>
-            <img src="{% static '/back_training/'%}{{exercise.image}}" alt="{{ exercise.title2 }}">
+            <img src="{{ exercise.image.url }}" alt="{{ exercise.title2 }}">
             <h2>{{ exercise.title2 }}</h2>
             <p><i>{{ exercise.description }}</i></p>
         </div>

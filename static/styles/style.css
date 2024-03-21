@@ -78,26 +78,25 @@ footer {
     justify-content: center;
 }
 
-.exercise_info {
+.exercise.image {
     text-align: center;
     margin: 20px;
 }
 
-/* Estilo para a imagem */
-.exercise_info img {
-    max-width: 300px; /* Ajuste conforme necessário */
+.exercise.image img {
+    max-width: 300px;
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
-.exercise_info h2 {
+.exercise.image h2 {
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 5px;
 }
 
-.exercise_info p {
+.exercise.image p {
     margin-top: 5px;
     margin-bottom: 10px;
 }

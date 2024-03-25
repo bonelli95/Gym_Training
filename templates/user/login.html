@@ -9,21 +9,33 @@
     <link rel="stylesheet" href="{% static 'styles/login.css' %}">
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        <h3><li><a href="{% url 'index' %}">Home</a></li></h3>
+      </ul>
+    </nav>
+  </header>
     <div class="login-container">
         <form class="login-form">
             <h1>Sing in</h1>
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            </div>
-            <button type="submit">Login</button>
-            <div class="forgot-password">
+            <form action="{% url 'login' %}" method="POST">
+              {% csrf_token %}
+              <div class="form-group">
+                  {% for field in form.visible_fields %}
+                  <div>
+                      <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                      {{ field }}
+                  </div>
+                  {% endfor %}
+              </div>
+              <div class="form-group">
+                  <button type="submit">Login</button>
+              </div>
+              <div class="forgot-password">
                 <a href="{% url 'register' %}">Create an account</a>
-            </div>
+              </div>
+            </form>
         </form>
     </div>
     <footer>

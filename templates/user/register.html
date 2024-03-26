@@ -12,21 +12,32 @@
   <header>
     <nav>
       <ul>
+        <h1>My Training</h1>
         <h3><li><a href="{% url 'index' %}">Home</a></li></h3>
       </ul>
+      {% for message in messages %}
+      <div class="message-container">
+        <p id="messages">{{ message }}</p>
+      {% endfor %}
+      </div>
     </nav>
   </header>
     <div class="register-container">
-      <form class="register-form" action="{% url 'register' %}" method="POST">
+      <form action="{% url 'register' %}" method="POST" class="register-form" >
           <h1>Register Your Account</h1>  
           {% csrf_token %}
           <div class="form-group">
-              {% for field in form.visible_fields %}
-              <div>
-                  <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-                  {{ field }}
-              </div>
-              {% endfor %}
+            {% for field in form.visible_fields %}
+            <div>
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {{ field }}
+            </div>
+            {% for error in field.errors %}
+            <div class="message-container">
+              {{ error }}
+            </div>
+            {% endfor %}
+            {% endfor %}
           </div>
           <div class="form-group">
             <button type="submit">Register</button>

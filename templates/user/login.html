@@ -12,14 +12,19 @@
   <header>
     <nav>
       <ul>
+        <h1>My Training</h1>
         <h3><li><a href="{% url 'index' %}">Home</a></li></h3>
       </ul>
+      {% for message in messages %}
+      <div class="message-container">
+        <p id="messages">{{ message }}</p>
+      </div>
+      {% endfor %}
     </nav>
   </header>
     <div class="login-container">
-        <form class="login-form">
-            <h1>Sing in</h1>
-            <form action="{% url 'login' %}" method="POST">
+            <form action="{% url 'login' %}" method="POST" class="login-form">
+              <h1>Sing in</h1>
               {% csrf_token %}
               <div class="form-group">
                   {% for field in form.visible_fields %}

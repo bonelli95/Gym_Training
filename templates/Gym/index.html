@@ -14,9 +14,14 @@
             <ul>
                 <li><a href="{% url 'login' %}">Sing in</a></li>
                 <li><a href="{% url 'register' %}">Create You Account</a></li>
-                <li><a href="#">Logout</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
+            {% for message in messages %}
+            <div class="message-container">
+              <p id="messages">{{ message }}</p>
+            </div>
+            {% endfor %}
         </nav>
     </header>
 

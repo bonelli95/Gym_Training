@@ -1,3 +1,4 @@
+from typing import Any
 from django import forms
 from django.forms import ModelForm, TextInput, PasswordInput
 
@@ -70,3 +71,23 @@ class RegisterForms(forms.Form):
             }
         )
     )
+
+    def clean_username_register(self):
+        username = self.cleaned_data.get('username_register')
+
+        if username:
+            username = username.strip()
+            if ' ' in username:
+                raise forms.ValidationError('Sorry, it is not possible to include spaces in registration names. Please remove spaces and try again')
+            else:
+                return username
+            
+    def clean_password2(self):
+        password1 = self.cleaned_data.get('password1')
+        password2 = self.cleaned_data.get('password2')
+
+        if password1 and password2:
+            if password1 != password2:
+                raise forms.ValidationError('Password Confirmation Error')
+            else:
+                return password2

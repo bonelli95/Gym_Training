@@ -25,12 +25,6 @@ class Exercise(models.Model):
     description = models.TextField(null=False, blank=False)
     image = models.ImageField(upload_to="photos/", blank=True)
     training_type = models.CharField(max_length=20, choices=TRAINING_TYPES_CHOICES,  default=BACK_TRAINING)
-    user = models.ForeignKey(
-        to=User,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=False,
-        related_name='user'
-    )
+  
     def __str__(self):
         return f'Exercises [title={self.title}]'

@@ -3,7 +3,6 @@ from user.forms import LoginForms, RegisterForms
 from django.contrib.auth.models import User
 from django.contrib import messages, auth
 
-
 def login(request):
     form = LoginForms()
 

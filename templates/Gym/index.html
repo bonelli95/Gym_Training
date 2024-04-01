@@ -4,18 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gym Fitness</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
 </head>
 <body>
     <header>
-        <h1>My Training</h1>
+        <h1>My Training</h1></br>
         <nav>
             <ul>
                 <li><a href="{% url 'login' %}">Sing in</a></li>
-                <li><a href="{% url 'register' %}">Create You Account</a></li>
+                <li><a href="{% url 'register' %}">Create Your Account</a></li>
                 <li><a href="{% url 'logout' %}">Logout</a></li>
-                <li><a href="#">Contact</a></li>
             </ul>
             {% for message in messages %}
             <div class="message-container">
@@ -36,7 +34,6 @@
     </section>
     <footer>
         <div class="container">
-            </a>
             <a href="https://www.instagram.com/_rodrigobonelli/" target=”_blank” >
                 <img src="{% static 'assets/instagram.png' %}" alt="instagram">
             </a>

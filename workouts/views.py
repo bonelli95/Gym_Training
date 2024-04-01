@@ -3,7 +3,8 @@ from workouts.models import Exercise
 from django.contrib import messages
 
 def index(request):
-    return render(request, 'Gym/index.html')
+    exercise_types = Exercise.TRAINING_TYPES_CHOICES
+    return render(request, 'Gym/index.html', {'exercise_types': exercise_types})
 
 def exercise_details(request):
     if not request.user.is_authenticated:

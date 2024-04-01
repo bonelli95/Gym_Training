@@ -16,15 +16,15 @@
             </ul>
         </nav>
     </header>
-    {% for exercise in exercise_info %}
     <section id="main-content">
+        {% for exercise in exercise_info %}
         <div class='exercise_info'>
             <img src="{{ exercise.image.url }}" alt="{{ exercise.title2 }}">
             <h2>{{ exercise.title2 }}</h2>
             <p><i>{{ exercise.description }}</i></p>
         </div>
+        {% endfor %}
     </section>
-    {% endfor %}
     <footer>
         <div class="container">
             <p>&copy; 2024 Gym.</p>

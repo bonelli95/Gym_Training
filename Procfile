@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT Gym.setup.wsgi:application
+web: waitress-serve --port=$PORT setup.wsgi:application

@@ -30,7 +30,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['my-training-9fdf0c00a234.herokuapp.com']
+ALLOWED_HOSTS = ['my-training-9fdf0c00a234.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -56,6 +56,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://my-training-9fdf0c00a234.herokuapp.com',
 ]
 
 ROOT_URLCONF = 'setup.urls'

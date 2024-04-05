@@ -59,7 +59,7 @@ MIDDLEWARE = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://*.herokuapp.com',
+    'https://my-training-9fdf0c00a234.herokuapp.com',
 ]
 
 ROOT_URLCONF = 'setup.urls'

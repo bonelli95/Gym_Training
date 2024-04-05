@@ -24,8 +24,8 @@
   </header>
     <div class="login-container">
             <form action="{% url 'login' %}" method="POST" class="login-form">
-              {% csrf_token %}
               <h1>Sing in</h1>
+              {% csrf_token %}
               <div class="form-group">
                   {% for field in form.visible_fields %}
                   <div>

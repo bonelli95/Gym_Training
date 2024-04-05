@@ -24,8 +24,8 @@
   </header>
     <div class="register-container">
       <form action="{% url 'register' %}" method="POST" class="register-form" >
+        <h1>Register Your Account</h1>  
         {% csrf_token %}
-          <h1>Register Your Account</h1>  
           <div class="form-group">
             {% for field in form.visible_fields %}
             <div>

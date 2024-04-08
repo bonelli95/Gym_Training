@@ -57,16 +57,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ALLOWED_HOSTS = ['https://my-training-9fdf0c00a234.herokuapp.com',
-                 'http://my-training-9fdf0c00a234.herokuapp.com/',
-                 '127.0.0.1'
+ALLOWED_HOSTS = ['my-training-9fdf0c00a234.herokuapp.com/',
+                 '127.0.0.1',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://my-training-9fdf0c00a234.herokuapp.com/',
-    'https://my-training-9fdf0c00a234.herokuapp.com/login/',
-    'https://my-training-9fdf0c00a234.herokuapp.com/register/',
-    'https://my-training-9fdf0c00a234.herokuapp.com/exercise_details/',
+    'http://my-training-9fdf0c00a234.herokuapp.com/',
+    'http://my-training-9fdf0c00a234.herokuapp.com/login/',
+    'http://my-training-9fdf0c00a234.herokuapp.com/register/',
+    'http://my-training-9fdf0c00a234.herokuapp.com/exercise_details/',
 ]
 CSRF_COOKIE_SECURE=True
 

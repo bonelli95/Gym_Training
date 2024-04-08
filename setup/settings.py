@@ -62,10 +62,7 @@ ALLOWED_HOSTS = ['my-training-9fdf0c00a234.herokuapp.com',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://my-training-9fdf0c00a234.herokuapp.com/',
-    'https://my-training-9fdf0c00a234.herokuapp.com/login',
-    'https://my-training-9fdf0c00a234.herokuapp.com/register',
-    'https://my-training-9fdf0c00a234.herokuapp.com/exercise_details',
+    'https://*.herokuapp.com/',
 ]
 
 CSRF_COOKIE_SECURE=True

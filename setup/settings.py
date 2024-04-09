@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path, os
 from dotenv import load_dotenv
-import dj_database_url
+import django_heroku
+
 
 # settings.py
 
@@ -58,7 +59,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ALLOWED_HOSTS = ['my-training-9fdf0c00a234.herokuapp.com',
+ALLOWED_HOSTS = ['https://my-training-9fdf0c00a234.herokuapp.com',
                  '127.0.0.1',
 ]
 
@@ -196,3 +197,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+django_heroku.settings(locals())

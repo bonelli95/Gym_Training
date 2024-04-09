@@ -58,7 +58,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ALLOWED_HOSTS = ['https://my-training-9fdf0c00a234.herokuapp.com',
+ALLOWED_HOSTS = ['my-training-9fdf0c00a234.herokuapp.com',
                  '127.0.0.1',
 ]
 

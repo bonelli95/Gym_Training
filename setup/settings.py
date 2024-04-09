@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 
@@ -68,7 +68,6 @@ CSRF_TRUSTED_ORIGINS = [
     'https://my-training-9fdf0c00a234.herokuapp.com/exercise_details/?type=',
 ]
 
-CSRF_COOKIE_SECURE=True
 
 ROOT_URLCONF = 'setup.urls'
 

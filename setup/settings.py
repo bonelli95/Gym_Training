@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path, os
 from dotenv import load_dotenv
+import dj_database_url
 
 # settings.py
 
@@ -95,11 +96,7 @@ WSGI_APPLICATION = 'setup.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-        'ATOMIC_REQUESTS': True,
-    }
+    'default': dj_database_url.config(default='sqlite:///' + BASE_DIR / 'db.sqlite3')
 }
 
 

@@ -1,12 +1,6 @@
+{% extends 'Gym/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
-</head>
-<body>
+{% block content %}
     <header>
         <h1>{% if exercise_info %}{{ exercise_info.0.title }}{% endif %}</h1>
         <nav>
@@ -24,14 +18,4 @@
         </div>
         {% endfor %}
     </section>
-    <footer>
-        <div class="container">
-            <a href="https://www.instagram.com/_rodrigobonelli/" target=”_blank” >
-                <img src="{% static 'assets/instagram.png' %}" alt="instagram">
-            </a>
-            <p>&copy; 2024 Gym.</p>
-        </div>
-        <p class="rodape__texto">By: Rodrigo</p>
-    </footer>
-</body>
-</html>
+{% endblock %}

@@ -1,14 +1,6 @@
+{%extends 'user/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Gym Fitness</title>
-    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/login.css' %}">
-</head>
-<body>
+{% block content %}
   <header>
     <nav>
       <ul>
@@ -42,15 +34,4 @@
               </div>
             </form>
     </div>
-    <footer>
-      <div class="container">
-          </a>
-          <a href="https://www.instagram.com/_rodrigobonelli/" target=”_blank” >
-              <img src="{% static 'assets/instagram.png' %}" alt="instagram">
-          </a>
-          <p>&copy; 2024 GYM</p>
-      </div>
-      <p class="rodape__texto">By: Rodrigo</p>
-  </footer>
-</body>
-</html>
+{% endblock %}

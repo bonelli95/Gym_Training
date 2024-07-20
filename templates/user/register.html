@@ -2,19 +2,6 @@
 {% load static %}
 {% block content %}
 <body id="body-register">
-  <header>
-    <nav>
-      <ul>
-        <h1>My Training</h1>
-        <h3><li><a href="{% url 'index' %}">Home</a></li></h3>
-      </ul>
-      {% for message in messages %}
-      <div class="message-container">
-        <p id="messages">{{ message }}</p>
-      {% endfor %}
-      </div>
-    </nav>
-  </header>
     <div class="register-container">
       <form action="{% url 'register' %}" method="POST" class="register-form" >
         <h1>Register Your Account</h1>  

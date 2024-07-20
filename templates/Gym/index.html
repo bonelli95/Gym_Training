@@ -1,22 +1,6 @@
 {% extends 'Gym/base.html' %}
 {% load static %}
 {% block content %}
-    <header>
-        <h1>My Training</h1></br>
-        <nav>
-            <ul>
-                <li><a href="{% url 'login' %}">Sing in</a></li>
-                <li><a href="{% url 'register' %}">Create Your Account</a></li>
-                <li><a href="{% url 'logout' %}">Logout</a></li>
-            </ul>
-            {% for message in messages %}
-            <div class="message-container">
-              <p id="messages">{{ message }}</p>
-            </div>
-            {% endfor %}
-        </nav>
-    </header>
-
     <section id="main-content">
         {% for training_type, _ in exercise_types %}
         <div class="profile">

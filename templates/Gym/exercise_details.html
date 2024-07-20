@@ -3,11 +3,6 @@
 {% block content %}
     <header>
         <h1>{% if exercise_info %}{{ exercise_info.0.title }}{% endif %}</h1>
-        <nav>
-            <ul>
-                <h3><li><a href="{% url 'index' %}">Home</a></li></h3>
-            </ul>
-        </nav>
     </header>
     <section id="main-content">
         {% for exercise in exercise_info %}
